@@ -3,11 +3,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { StudentComponent } from './student/student.component';
 import { StudentdetailComponent } from './studentdetail/studentdetail.component';
 import { LoginComponent } from './login/login.component';
+import { CustomerrorComponent } from './customerror/customerror.component';
 
 const routes: Routes = [
-  {
-     path:'',redirectTo : 'Login', pathMatch:'full'
-  },
+
   {
     path:'studentLink', component:StudentComponent
   },
@@ -16,7 +15,13 @@ const routes: Routes = [
   },
   {
     path:'Login', component:LoginComponent
-  }
+  },
+  {
+    path:'',redirectTo : 'Login', pathMatch:'full'
+ },
+  {
+    path:'**', component:CustomerrorComponent
+ }
 ];
 
 @NgModule({
